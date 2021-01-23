@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script src="jquery-3.3.1.js"></script>
+<script type="text/javascript">
+	
+	$(function(){
+		var heather = $("h2");
+		var paragraph = $("p");
+		paragraph.not(":first").hide();
+		
+		heather.on("click",function(){
+			var t =$(this);
+			var tpara=t.next();
+			if(tpara.is(":visible")){
+				return;
+			}
+			paragraph.slideUp("normal");
+			tpara.slideDown("normal");
+		});
+	});
+	
+</script>
+<style>
+	#accordion{
+		width: 500px;
+		border: 1px solid black;
+	}
+	#accordion h2{
+		padding: 4px;
+		margin:0;
+		background-color: #ddd;
+	}
+	#accordion p{
+		padding: 0 5px;
+	}
+	
+</style>
+</head>
+
+<body>
+<div id ="accordion">
+	<h2>The Accordion</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet accusamus id, tempora molestiae facere rerum eligendi consectetur nulla, consequatur cum illum iste quod, totam impedit. Repellat doloribus veritatis voluptatum illo!</p>
+	<h2>The Accordion</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet accusamus id, tempora molestiae facere rerum eligendi consectetur nulla, consequatur cum illum iste quod, totam impedit. Repellat doloribus veritatis voluptatum illo!</p>
+	<h2>The Accordion</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet accusamus id, tempora molestiae facere rerum eligendi consectetur nulla, consequatur cum illum iste quod, totam impedit. Repellat doloribus veritatis voluptatum illo!</p>
+	<h2>The Accordion</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet accusamus id, tempora molestiae facere rerum eligendi consectetur nulla, consequatur cum illum iste quod, totam impedit. Repellat doloribus veritatis voluptatum illo!</p>
+	<h2>The Accordion</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet accusamus id, tempora molestiae facere rerum eligendi consectetur nulla, consequatur cum illum iste quod, totam impedit. Repellat doloribus veritatis voluptatum illo!</p>
+</div>
+</body>
+</html>
